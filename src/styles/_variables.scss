@@ -1,0 +1,38 @@
+$color-black: #232536;
+$color-yellow: #ffd050;
+$color-dark-grey: #4c4c4c;
+$color-medium-grey: #6d6e76;
+$color-purple: #592ea9;
+$color-light: #ffffff;
+$color-light-yellow: #fbf6ea;
+$color-light-gray: #f4f4f4;
+$color-lavender: #f4f0f8;
+
+$button-heigh: 56px;
+$button-padding-inline: 48px;
+$button-weight: 700;
+$button-font-size: 18px;
+$button-line-heigh: 24px;
+$button-color: $color-black;
+$button-background-color: $color-yellow;
+$button-background-hover: #edc14a;
+
+@mixin button {
+  height: $button-heigh;
+  padding-inline: $button-padding-inline;
+  font-weight: $button-weight;
+  font-size: $button-font-size;
+  line-height: $button-line-heigh;
+  color: $color-black;
+  background: $color-yellow;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background: $button-background-hover;
+  }
+}
+
+$input-heigh: 76px;
+$input-heigh-small: 56px;
+$input-padding-left: 24px;
+$input-padding-right: 63px;
