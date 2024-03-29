@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap");
+@import "_media", "_variables", "_globals";
+
+* {
+  font-family: "Sen", sans-serif;
+  color: $color-black;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1302px;
+  padding-inline: 10px;
+}
+
+.button {
+  @include button;
+}
+
+.header {
+  background-color: $color-black;
+
+  &__body {
+    padding-block: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__row {
+    align-items: center;
+    display: flex;
+    gap: 32px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      gap: 24px;
+    }
+
+    &-link {
+      color: $color-light;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-yellow;
+      }
+    }
+  }
+
+  &__button {
+    background-color: $color-light;
+    color: $color-black;
+  }
+}
+
+.hero {
+  &__body {
+    padding-bottom: 64px;
+  }
+
+  &__info {
+    position: relative;
+    left: 109px;
+    top: 80px;
+    display: flex;
+    &-block {
+      padding: 64px;
+      background-color: $color-light;
+    }
+  }
+
+  &__title {
+    max-width: 496px;
+  }
+
+  &__cap {
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    margin-left: 32px;
+    margin-top: 102px;
+    color: $color-dark-grey;
+    max-width: 477px;
+    margin-top: 102px;
+  }
+
+  &__numbers {
+    background-image: url(../images/about/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 275px;
+    padding-left: 109px;
+
+    &-list {
+      width: 630px;
+      background-color: $color-yellow;
+      padding: 32px 48px;
+      display: flex;
+      gap: 68px;
+    }
+
+    &-display {
+      color: $color-black;
+    }
+  }
+
+  &__lines {
+    display: flex;
+  }
+
+  &__purple {
+    display: block;
+    content: "";
+    background-color: $color-purple;
+    width: 311px;
+    height: 23px;
+  }
+  &__yellow {
+    display: block;
+    content: "";
+    background-color: $color-yellow;
+    width: 550px;
+    height: 23px;
+  }
+
+  &__about {
+    background-color: $color-lavender;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding-top: 128px;
+    padding-bottom: 64px;
+
+    &-cap {
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    &-title {
+      margin-bottom: 16px;
+      max-width: 475px;
+    }
+
+    &-text {
+      color: $color-medium-grey;
+    }
+
+    &-mission,
+    &-vision {
+      max-width: 516px;
+    }
+  }
+}
+
+.team {
+  &__body {
+    padding-block: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    max-width: 519px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.why {
+  &__body {
+    padding-block: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    max-width: 519px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.authors {
+  &__body {
+    padding-block: 64px;
+    text-align: center;
+
+    @include tablet {
+      padding-block: 40px;
+    }
+
+    @include mobile {
+      padding-block: 30px;
+    }
+
+    @include mobile-s {
+      padding-block: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 48px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+
+    @include desktop {
+      justify-content: center;
+    }
+
+    @include mobile {
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    width: 296px;
+    background-color: $color-light-gray;
+    padding: 40px 28px;
+    transition: background-color 0.3s ease;
+
+    @include desktop {
+      width: 40%;
+    }
+
+    @include mobile {
+      width: 296px;
+    }
+
+    &:hover {
+      background-color: $color-light-yellow;
+    }
+  }
+
+  &__image {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    &-job {
+      color: $color-medium-grey;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__media {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+.join {
+  &__body {
+    margin: 0 auto;
+    max-width: 414px;
+    padding-block: 64px;
+    text-align: center;
+
+    @include tablet {
+      padding-block: 40px;
+    }
+
+    @include mobile {
+      padding-block: 30px;
+    }
+
+    @include mobile-s {
+      padding-block: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+  }
+}
+
+.footer {
+  background-color: $color-black;
+
+  &__body {
+    margin-top: 64px;
+    padding-top: 59px;
+    padding-bottom: 56px;
+
+    @include tablet {
+      margin-top: 40px;
+    }
+
+    @include tablet {
+      margin-top: 30px;
+    }
+
+    @include mobile {
+      margin-top: 20px;
+    }
+  }
+
+  &__row {
+    margin-bottom: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      gap: 20px;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      gap: 24px;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+
+    &-link {
+      color: $color-light;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-yellow;
+      }
+    }
+  }
+
+  &__title {
+    color: $color-light;
+    max-width: 562px;
+  }
+
+  &__subscribe {
+    padding: 80px 64px;
+    display: flex;
+    justify-content: space-between;
+    gap: 54px;
+    align-items: start;
+    background-color: rgba($color: $color-light, $alpha: 0.05);
+
+    @include tablet {
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mobile {
+      padding: 40px 32px;
+      gap: 20px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    gap: 24px;
+
+    @include mobile-s {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__input {
+    color: $color-light;
+    height: 56px;
+    padding-left: $input-padding-left;
+    padding-right: $input-padding-right;
+    border: 1px solid $color-dark-grey;
+
+    &::placeholder {
+      color: $color-medium-grey;
+    }
+  }
+
+  &__info {
+    align-items: center;
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__media {
+    display: flex;
+    gap: 27px;
+  }
+
+  &__contact {
+    color: rgba($color: $color-light, $alpha: 0.7);
+  }
+}

@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap");
+@import "_media", "_variables", "_globals";
+
+* {
+  font-family: "Sen", sans-serif;
+  color: $color-black;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1302px;
+  padding-inline: 10px;
+}
+
+.button {
+  @include button;
+}
+
+.header {
+  background-color: $color-black;
+
+  &__body {
+    padding-block: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__row {
+    align-items: center;
+    display: flex;
+    gap: 32px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      gap: 24px;
+    }
+
+    &-link {
+      color: $color-light;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-yellow;
+      }
+    }
+  }
+
+  &__button {
+    background-color: $color-light;
+    color: $color-black;
+  }
+}
+
+.hero {
+  background: $color-lavender;
+
+  &__body {
+    padding-block: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+  }
+
+  &__cap {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    max-width: 624px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__label {
+    margin-bottom: 16px;
+  }
+
+  &__label span {
+    color: $color-purple;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    color: $color-medium-grey;
+  }
+}
+
+.post {
+  &__body {
+    padding-top: 64px;
+
+    @include tablet {
+      padding-top: 40px;
+    }
+
+    @include mobile {
+      padding-top: 30px;
+    }
+
+    @include mobile-s {
+      padding-top: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 64px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba($color: $color-medium-grey, $alpha: 0.33);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    margin-bottom: 64px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__cap {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: $color-purple;
+  }
+
+  &__info {
+    &-title {
+      margin-bottom: 16px;
+      max-width: 603px;
+    }
+
+    &-text {
+      color: $color-medium-grey;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+  }
+
+  &__button {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: $color-medium-grey;
+    transition: all 0.3s ease;
+
+    @include tablet {
+      font-size: clamp(18px, 2vw, 24px);
+      line-height: clamp(20px, 3vw, 32px);
+    }
+
+    &:hover {
+      transform: scale(1.1666);
+      color: $color-black;
+    }
+  }
+}
+
+.category {
+  &__body {
+    padding-block: 64px;
+
+    @include tablet {
+      padding-block: 40px;
+    }
+
+    @include mobile {
+      padding-block: 30px;
+    }
+
+    @include mobile-s {
+      padding-block: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 48px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 32px;
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    padding: 32px;
+    border: 1px solid rgba($color: $color-medium-grey, $alpha: 0.3);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-yellow;
+    }
+  }
+
+  &__image {
+    &-wrapper {
+      margin-bottom: 16px;
+      width: 48px;
+      aspect-ratio: 1;
+      background-color: $color-light-yellow;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & svg:first-child {
+        position: absolute;
+      }
+    }
+
+    &-title {
+      margin-bottom: 4px;
+      color: $color-black;
+    }
+
+    &-text {
+      color: $color-medium-grey;
+    }
+  }
+}
+
+.join {
+  &__body {
+    margin: 0 auto;
+    max-width: 414px;
+    padding-block: 64px;
+    text-align: center;
+
+    @include tablet {
+      padding-block: 40px;
+    }
+
+    @include mobile {
+      padding-block: 30px;
+    }
+
+    @include mobile-s {
+      padding-block: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+  }
+}
+
+.footer {
+  background-color: $color-black;
+
+  &__body {
+    margin-top: 64px;
+    padding-top: 59px;
+    padding-bottom: 56px;
+
+    @include tablet {
+      margin-top: 40px;
+    }
+
+    @include tablet {
+      margin-top: 30px;
+    }
+
+    @include mobile {
+      margin-top: 20px;
+    }
+  }
+
+  &__row {
+    margin-bottom: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      gap: 20px;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      gap: 24px;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+
+    &-link {
+      color: $color-light;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-yellow;
+      }
+    }
+  }
+
+  &__title {
+    color: $color-light;
+    max-width: 562px;
+  }
+
+  &__subscribe {
+    padding: 80px 64px;
+    display: flex;
+    justify-content: space-between;
+    gap: 54px;
+    align-items: start;
+    background-color: rgba($color: $color-light, $alpha: 0.05);
+
+    @include tablet {
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mobile {
+      padding: 40px 32px;
+      gap: 20px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    gap: 24px;
+
+    @include mobile-s {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__input {
+    color: $color-light;
+    height: 56px;
+    padding-left: $input-padding-left;
+    padding-right: $input-padding-right;
+    border: 1px solid $color-dark-grey;
+
+    &::placeholder {
+      color: $color-medium-grey;
+    }
+  }
+
+  &__info {
+    align-items: center;
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__media {
+    display: flex;
+    gap: 27px;
+  }
+
+  &__contact {
+    color: rgba($color: $color-light, $alpha: 0.7);
+  }
+}
